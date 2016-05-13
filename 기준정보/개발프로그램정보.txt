@@ -1,0 +1,28 @@
+-- 01. ▶가동률Copy 시트                                  EXEC m_opsrm_sp_kit_temp_if  EXEC m_opsmr_sp_op_rate 'STD','201501','201603' --
+-- 02. 운영Capa Copy시트                                EXEC m_opsmr_sp_op_rate 'PROD','201501','201603' --
+-- 03. ③-2.제품-법인별_수량집계                             EXEC m_opsmr_sp_prod_sub_qty_sum 'STD','201501','201603'
+-- 04. ⑤ 법인-제품별                                    EXEC m_opsmr_sp_sub_prod_qty_capa 'STD','201501','201603'
+-- 05. 운영가동률                                       EXEC m_opsmr_sp_prod_rate 'STD','201501','201603'
+
+-- 06. 2-1.가동률구간별(부품포함)                           EXEC m_opsmr_sp_rate_section 'STD','201501','201603'      --PROD
+-- 07. COO 4-1.가동률 구간별 (부품포함)                     EXEC m_opsmr_sp_rate_section_plan 'STD','201501','201603' --PROD
+-- 08. 2-2. 10% 이상변동                               EXEC m_opsmr_sp_rate_gap_10_pre 'STD','201603',85,10      -- PROD
+09. 2-2. 10% 이상변동-발송                           EXEC m_opsmr_sp_rate_gap_10_pre 'STD','201603',85,10
+10. -- 2-3. 10% 이상변동(차월)                          EXEC m_opsmr_sp_rate_gap_10_post 'STD','201603',85,10
+11. -- 2-3. 10% 이상변동-발송                           EXEC m_opsmr_sp_rate_gap_10_post 'STD','201603',85,10
+12. COO 4-2. 70%미만(3개월예상)                      EXEC m_opsmr_sp_rate_70_less 'STD','201603',70
+13. COO 4-2. 70%미만(3개월예상)-발송용               EXEC m_opsmr_sp_rate_70_less 'STD','201603',70
+14. COO 4-3.예상가동률 120%이상-발송용               EXEC m_opsmr_sp_rate_120_more 'STD','201603',120
+15. COO 1-1.그래프                                   EXEC m_opsmr_sp_graph 'STD','201603'
+16. COO 1-2.그래프(해외)                             EXEC m_opsmr_sp_graph_location 'STD','201603','OVERSEA'
+17. COO 1-2.그래프(국내)                             EXEC m_opsmr_sp_graph_location 'STD','201603','LOCAL'
+18. 방문법인분석(CEO)-남경                           EXEC m_opsmr_sp_graph_factory 'STD','201603','LGEKR'
+
+19. COO 6-1.주요제품 가동률 및 인당원당(해외.AT포함        EXEC m_opsmr_sp_major_hr_01 'STD','201603'|
+                                         EXEC m_opsmr_sp_major_hr_02 'STD','201603'|
+                                         EXEC m_opsmr_sp_major_hr_03 'STD','201603','LGEAT','RAC'|
+                                         EXEC m_opsmr_sp_major_hr_04 'STD','201603','Total(AT포함)','Total'
+
+-- 20. COO 7.본부별 정리(운영포함)                      EXEC m_opsmr_sp_company_rate 'STD','201603'
+-- 21. COO 유첨)제품공장별 정리                         EXEC m_opsmr_sp_factory_rate 'STD','201603' -- m_opsmr_sp_factory_rate_2
+-- 22. COO 유첨)법인별 가동률                           EXEC m_opsmr_sp_subsidiary_rate 'STD','201603' -- m_opsmr_sp_subsidiary_rate_2

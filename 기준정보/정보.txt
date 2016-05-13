@@ -1,0 +1,20 @@
+
+DB2 :  http://dbeaver.jkiss.org/download/
+
+MS SQL : 165.244.249.48   / SMART_MGR / !smart201311
+
+app_admin01 / !biccdev123
+
+생산대쉬보드 http://production-dashboard.lge.com/jsp/sys/admin/login.jsp	admin / qw****34
+
+	IP : 165.243.166.77 
+	DB SID(Name)	ID	                 PWD	 PORT	
+	EDWTEST	od_mgr	!!coo81@@		50000
+	EDWPROD	od_app	!@#roqkf123		50000
+
+DB Link 샘플(MS SQL) : Prod_IF_Sales_TP1_LOAD
+
+개발서버(파일서버) 접근계정 : app_admin01 / !biccdev123
+      10.181.2.23
+
+
